@@ -15,7 +15,6 @@ $result = $mydb->loadSingleResult();
 ?> 
 
 
-
  <p> <?php check_message();?></p>     
 <?php 
 if (isset($_SESSION['APPLICANTID'])) {

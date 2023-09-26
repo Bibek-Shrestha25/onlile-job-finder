@@ -27,11 +27,12 @@
  
  
  
-   <form action="index.php?q=result&searchfor=bytitle" method="POST"> 
+   <form action="index.php" method="GET"> 
  
  
    <div class="input-group" style="align:Y-axis-40;">
-   <input type="text" style = "height:50px; widhth:60px" class="form-control rounded"  placeholder="Enter the Job Title" aria-label="Search" aria-describedby="submit" />
+   <input type="hidden" name="q" value="sequential-search">
+   <input type="text" name="jobTitle" style = "height:50px; widhth:60px" class="form-control rounded"  placeholder="Enter the Job Title" aria-label="Search" aria-describedby="submit" />
    <button type="submit" class="btn btn-outline-primary">Search</button>
    <?php
     if (isset($_POST['search'])) {
