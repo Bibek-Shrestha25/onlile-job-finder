@@ -25,7 +25,7 @@ switch ($view) {
 		break;
 	case 'viewjob' :
         $title="Job Details";	
-		$content='viewjob.php';		
+		$content='viewjob.php';	
 		break;
 	case 'success' :
         $title="Success";	
@@ -65,7 +65,7 @@ switch ($view) {
 		$content='searchbytitle.php';		
 		break;
 	case 'sequential-search' :
-		$title="Search";
+		$title="Result";
 		$content="SearchSequential.php";
 		break;				
 	default :

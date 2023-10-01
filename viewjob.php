@@ -67,7 +67,7 @@
                                         <?php if (isset($_SESSION['APPLICANTID'])) :?>
                                             <a href="<?php echo web_root; ?>index.php?q=apply&job=<?php echo $result->JOBID;?>&view=personalinfo" class="btn btn-main btn-next-tab">Apply Now !</a>
                                             <?php else :?>                            
-                                                <a href="<?php echo web_root; ?>index.php?q=register" class="btn btn-main btn-next-tab">To Apply Register Firs!t</a>
+                                                <a href="" data-target="#myModal" data-toggle="modal" class="btn btn-main btn-next-tab">To Apply Login First!</a>
                                         <?php endif;?>                            
                                     </div>
                                 </div>
