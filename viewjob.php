@@ -64,7 +64,11 @@
                                                 <p>Location :  <?php echo  $result->COMPANYADDRESS; ?></p>
                                             </div>
                                         </div>
-                                          <a href="<?php echo web_root; ?>index.php?q=apply&job=<?php echo $result->JOBID;?>&view=personalinfo" class="btn btn-main btn-next-tab">Apply Now !</a>
+                                        <?php if (isset($_SESSION['APPLICANTID'])) :?>
+                                            <a href="<?php echo web_root; ?>index.php?q=apply&job=<?php echo $result->JOBID;?>&view=personalinfo" class="btn btn-main btn-next-tab">Apply Now !</a>
+                                            <?php else :?>                            
+                                                <a href="<?php echo web_root; ?>index.php?q=register" class="btn btn-main btn-next-tab">To Apply Register Firs!t</a>
+                                        <?php endif;?>                            
                                     </div>
                                 </div>
                             </div> 
