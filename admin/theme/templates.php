@@ -73,13 +73,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu" style="padding-right: 15px;"  >
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo web_root.'admin/user/'. $singleuser->PICLOCATION;?>" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $singleuser->FULLNAME; ?></span>
+              <img src="<?php echo web_root.'admin/user/'. @$singleuser->PICLOCATION??'' ?>" class="user-image" alt="User Image">
+              <span class="hidden-xs"><?php echo @$singleuser->FULLNAME; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header"> 
-                <img data-target="#menuModal"  data-toggle="modal"  src="<?php echo web_root.'admin/user/'. $singleuser->PICLOCATION;?>" class="img-circle" alt="User Image" />  
+                <img data-target="#menuModal"  data-toggle="modal"  src="<?php echo web_root.'admin/user/'. @$singleuser->PICLOCATION;?>" class="img-circle" alt="User Image" />  
               </li> 
               <!-- Menu Footer-->
               <li class="user-footer">
@@ -271,13 +271,7 @@
   <!-- /.content-wrapper -->
 
 
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.2
-    </div>
-    <strong>Copyright &copy; 2023 <a href="#"></a>.</strong>
-  </footer>
-
+ 
   
 
     </body>

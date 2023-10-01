@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>ERIS / <?php echo $title;?></title>
+<title>Job Finder / <?php echo $title;?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
 <!-- css -->
 <link href="<?php echo web_root; ?>plugins/home-plugins/css/bootstrap.min.css" rel="stylesheet" />
 <link href="<?php echo web_root; ?>plugins/home-plugins/css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
@@ -78,7 +77,7 @@
                     $showMsg = $mydb->loadSingleResult();
                     $msg =isset($showMsg->COUNT) ? $showMsg->COUNT : 0;
 
-                    echo ' <p class="pull-right login"><a title="View Notification(s)" href="'.web_root.'applicant/index.php?view=notification"> <i class="fa fa-bell-o"></i> <span class="label label-success">'.$notif.'</span></a> | <a title="View Message(s)" href="'.web_root.'applicant/index.php?view=message"> <i class="fa fa-envelope-o"></i> <span class="label label-success">'.$msg.'</span></a> | <a title="View Profile" href="'.web_root.'applicant/"> <i class="fa fa-user"></i> Howdy, '. $appl->FNAME. ' '.$appl->LNAME .' </a> | <a href="'.web_root.'logout.php">  <i class="fa fa-sign-out"> </i>Logout</a> </p>';
+                    echo ' <p class="pull-right login"><a title="View Notification(s)" href="'.web_root.'applicant/index.php?view=notification"> <i class="fa fa-bell-o"></i> <span class="label label-success">'.$notif.'</span></a> | <a title="View Message(s)" href="'.web_root.'applicant/index.php?view=message"> <i class="fa fa-envelope-o"></i> <span class="label label-success">'.$msg.'</span></a> | <a title="View Profile" href="'.web_root.'applicant/"> <i class="fa fa-user"></i> '. $appl->FNAME. ' '.$appl->LNAME .' </a> | <a href="'.web_root.'logout.php">  <i class="fa fa-sign-out"> </i>Logout</a> </p>';
 
                     }else{ ?>
                       <p   class="pull-right login"><a data-target="#myModal" data-toggle="modal" href=""> <i class="fa fa-lock"></i> Login </a></p>
@@ -180,14 +179,14 @@
         ?>   
  
 
-  <footer>
+  <footer >
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-4">
         <div class="widget">
           <h5 class="widgetheading">Our Contact</h5>
           <address>
-          Old Baneshwor, Kathmandu Nepal<br>
+          New Baneshwor, Kathmandu Nepal<br>
            </address>
           <p>
             <i class="icon-phone"></i> +977-9825924337<br>
@@ -313,7 +312,7 @@
                         "padding"    : "5px;"
                     }); 
           $("#loginerrormessage").html("Invalid Username and Password!");
-          //  $("#loginerrormessage").css(function(){ 
+          //  $("#loginerrormessage").css(function(){
           //   "background-color" : "red";
           // });
         }else{

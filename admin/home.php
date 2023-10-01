@@ -83,7 +83,7 @@
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="/onlie job finder/admin/category/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/online job finder/admin/category/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
