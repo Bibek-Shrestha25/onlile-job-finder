@@ -109,7 +109,7 @@
         break;
       case 'accounts':
         # code...
-        // require_once("accounts.php");
+        require_once("accounts.php");
         break;
       
       default:
@@ -160,8 +160,7 @@
                                                 <div class="col-md-12">
                                                     <div class="rows">
                                                         <div class="col-md-8">
-                                                          <input name="MAX_FILE_SIZE" type=
-                                                            "hidden" value="1000000"> <input id=
+                                                          <input id=
                                                             "photo" name="photo" type=
                                                             "file">
                                                         </div>

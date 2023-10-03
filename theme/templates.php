@@ -60,7 +60,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">      
-                <p class="pull-left hidden-xs"><i class="fa fa-phone"></i>Moblie NO:9825924337</p>
+                <p class="pull-left hidden-xs"><i class="fa fa-phone"></i><b>TEL NO: 029-560432</b></p>
                 <?php if (isset($_SESSION['APPLICANTID'])) { 
 
                     $sql = "SELECT count(*) as 'COUNTNOTIF' FROM `tbljob` ORDER BY `DATEPOSTED` DESC";
@@ -189,8 +189,8 @@
           New Baneshwor, Kathmandu Nepal<br>
            </address>
           <p>
-            <i class="icon-phone"></i> +977-9825924337<br>
-            <i class="icon-envelope-alt"></i>CareerLink@gmail.com
+            <i class="icon-phone"></i> 029-560432<br>
+            <i class="icon-envelope-alt"></i>onlinejobfinder@gmail.com
           </p>
         </div>
       </div>
@@ -282,6 +282,22 @@
 <script src="<?php echo web_root; ?>plugins/home-plugins/js/custom.js"></script> 
 <!-- <script src="<?php echo web_root; ?>plugins/paralax/paralax.js"></script>  -->
 
+
+<script>
+function getInputData() {
+    // Get the input element by its ID
+    var inputElement = document.getElementById("jobSearch");
+
+    // Get the input value
+    var inputValue = inputElement.value;
+
+    // Display or use the input value as needed
+    console.log("Input Value:", inputValue);
+    // You can replace the console.log with any action you want to perform with the input data
+}
+
+  </script>
+  
  <script type="text/javascript">
    
      $(function () {

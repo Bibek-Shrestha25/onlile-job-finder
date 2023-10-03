@@ -64,10 +64,25 @@ if($targetElement){
         </table>
     <?php
         } else { ?>
-             <img src ="dist/img/nojob.jpg"div style="border-bottom: 0px solid #ddd;padding: opx; align-items:center; justify-content: center">
-             <p><b> Sorry, The Job vacancy application that your'e looking for is not available at the moment.<br>
-             We will notify you Soon when the vacancy is announced.</b></p>
-             <!-- <div style="border-bottom: 0px solid #ddd;padding: opx; align-items:center; justify-content: center"> -->
+                <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="dist\img\cartoon.jpg" alt="Job Vacancy" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading">Sorry, The Job vacancy application that you're looking for is not available at the moment.</h4>
+                    <p>We will notify you soon when the vacancy is announced.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
       
         <?php }
     }
@@ -77,7 +92,7 @@ if($targetElement){
     }
 }   
 else {
-    echo "Invalid Request, please input the Job title";
+    echo "<b>Invalid Request, please input the Job title</b>";
 }
 ?>
 </div>

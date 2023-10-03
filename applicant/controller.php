@@ -66,7 +66,7 @@ switch ($action) {
 		if ( $errofile > 0) {
 				message("No Image Selected!", "error");
 
-				redirect("index.php?view=view&id=". $_GET['id']);
+				redirect("index.php?view=view&id=". $_FILES['photo']);
 		}else{
 	 
 				@$file=$_FILES['photo']['tmp_name'];
@@ -84,7 +84,7 @@ switch ($action) {
 					 
 
 						$applicant = New Applicants();
-						$applicant->APPLICANTPHOTO 			= $location;
+						$applicant->APPLICANTPHOTO = $location;
 						$applicant->update($_SESSION['APPLICANTID']);
 						redirect(web_root."applicant/");
 						 

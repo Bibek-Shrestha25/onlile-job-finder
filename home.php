@@ -35,21 +35,8 @@
    <input type="text" name="jobTitle" style = "height:50px; widhth:60px" class="form-control rounded"  placeholder="Enter the Job Title" aria-label="Search" aria-describedby="submit" />
    <button type="submit" class="btn btn-outline-primary">Search</button>
    <?php
-    if (isset($_POST['search'])) {
-        $searchTerm = $_POST['search'];
-        
-        if (empty($job)) {
-            echo "No jobs found.";
-        } else {
-            // Perform your search operation here
-            // You can query a database or search in some data source
-            // and display the results accordingly.
-            // For demonstration purposes, we'll just display the search term.
-            echo "Search results for: " . $job;
-        }
-    } else {
         echo "Please enter a Valid input.";
-    }
+    
     ?>
     <li >
                 <!-- <img src="<?php echo web_root; ?>plugins/home-plugins/img/slides/slides2.jpg" alt="" />
@@ -165,27 +152,11 @@
        <div class="row">
          <div class="col-md-12">
            <div class="section-title text-center">
-             <h2 >Popular Jobs</h2>  
+            
            </div>
          </div>
        </div>
-       <div class="row">
-         <div class="col-md-12 ">
-           <?php 
-             $sql = "SELECT * FROM `tblcategory`";
-             $mydb->setQuery($sql);
-             $cur = $mydb->loadResultList();
- 
-             foreach ($cur as $result) {
-               echo '<div class="col-md-3" style="font-size:15px;padding:5px">* 
-               <a href="'.web_root.'index.php?q=category&search='.$result->CATEGORY.'">
-               '.$result->CATEGORY.'</a></div>';
-             }
- 
-           ?>
-         </div>
-       </div>
-  
+       
      </div>
    </section>    
    <section id="content-3-10" class="content-block data-section nopad content-3-10">
