@@ -2,6 +2,7 @@
 <?php
 // Algo
 function sequentialSearch($arr, $target) {
+    //linear search algorith
     $length = count($arr);
     $indices = [];
 
@@ -64,36 +65,41 @@ if($targetElement){
         </table>
     <?php
         } else { ?>
-                <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="dist\img\cartoon.jpg" alt="Job Vacancy" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <div class="alert alert-info">
-                    <h4 class="alert-heading">Sorry, The Job vacancy application that you're looking for is not available at the moment.</h4>
-                    <p>We will notify you soon when the vacancy is announced.</p>
-                </div>
+              <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="dist\img\cartoon.jpg" alt="Job Vacancy" class="img-fluid">
+        </div>
+        <div class="col-md-5">
+            <div class="alert alert-info">
+                <h4 class="alert-heading">Sorry, The Job vacancy application that you're looking for is not available at the moment.</h4>
+                <p>We will notify you soon when the vacancy is announced.</p>
+                <form action="" method="GET">
+
+                    <div>
+                        <!-- Add a search button here -->
+                        <input type="hidden" name="q" value="sequential-search">
+                          <input type="text" name="jobTitle" style = "height:50px; widhth:60px" class="form-control rounded"  placeholder="Enter the Job Title" aria-label="Search" aria-describedby="submit" />
+
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Include Bootstrap JS and jQuery (if needed) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Include Bootstrap JS and jQuery (if needed) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
       
       
         <?php }
     }
-    else
-    {
-        echo "no job found named {$targetElement}";
-    }
 }   
-else {
-    echo "<b>Invalid Request, please input the Job title</b>";
-}
+
 ?>
 </div>
 

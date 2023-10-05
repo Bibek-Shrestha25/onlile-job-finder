@@ -13,7 +13,7 @@
             
               
                <li>
-                 <img src="<?php echo web_root; ?>plugins/home-plugins/img/slides/wep8.jpeg" alt="" />
+                 <img src="<?php echo web_root; ?>plugins/home-plugins/img/slides/UI.jpg" alt="" />
                  <div class="flex-caption">
                      <!-- <h3>Innovation</h3> 
                     <p>Find the Perfect Job Opportunities with Our Platform."</p> 
@@ -32,7 +32,7 @@
  
    <div class="input-group" style="align:Y-axis-40;">
    <input type="hidden" name="q" value="sequential-search">
-   <input type="text" name="jobTitle" style = "height:50px; widhth:60px" class="form-control rounded"  placeholder="Enter the Job Title" aria-label="Search" aria-describedby="submit" />
+   <input type="text" name="jobTitle" required style = "height:50px; widhth:60px" class="form-control rounded"  placeholder="Enter the Job Title" aria-label="Search" aria-describedby="submit" />
    <button type="submit" class="btn btn-outline-primary">Search</button>
    <?php
         echo "Please enter a Valid input.";
@@ -95,15 +95,15 @@
    <section id="call-to-action-2">
      <div class="container-fluid">
        <div class="row">
-         <div class="col-md-8 col-sm-9">
+         <div class="col-md-12 col-sm-12" >
            <h3>Discover, Connect, Succeed</h3>
-           <p>
+           <p><b>
            Welcome to our online job platform, where possibilities meet success.
             Our platform is designed to revolutionize the way you search for your dream career. With our 
-            advanced technology and user-friendly interface, we empower you to effortlessly explore a vast array of
+            user-friendly interface, we empower you to effortlessly explore a vast array of
              job opportunities from top companies and industries. Our intelligent matching algorithm ensures that you 
-             are connected with the perfect opportunities that align with your skills, qualifications, and aspirations.
-           </p>
+             are connected with the perfect opportunities that align with your skills qualifications, and aspirations.
+</b></p>
          </div>
         <!--  <div class="col-md-2 col-sm-3">
            <a href="#" class="btn btn-primary">Read More</a>
@@ -172,7 +172,7 @@
          <div class="editContent">
            <h3>Our Team</h3>
          </div>
-         <div class="editContent"  style="height:235px;">
+         <div class="editContent-col-md-12"  style="height:235px;" >
            <p style=margin:20px;> 
            Our team at the Online Job Finder system is a dedicated group of professionals passionate about connecting 
            job seekers with their ideal career paths. With a diverse range of expertise in technology, data analysis, 

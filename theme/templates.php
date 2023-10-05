@@ -91,11 +91,16 @@
         <div class="navbar navbar-default navbar-fixed" > 
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <style>
+                      .navbar{
+                        background-color: #3498db;
+                      }
+                      </style>
                     <a class="navbar-brand" href="<?php echo web_root; ?>index.php">Online Job Finder<!-- <img src="<?php echo web_root; ?>plugins/home-plugins/img/logo.png" alt="logo"/> --></a>
                 </div>
                 <div class="navbar-collapse collapse ">
