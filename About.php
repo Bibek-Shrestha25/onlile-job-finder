@@ -9,11 +9,11 @@
 				</div>
 				<div class="col-md-6">
 					<div class="about-text">
-						<div class = "col-md-12" style="color:darkblue; font style:Times of New Roman">
-						<p>Welcome to our online job finder platform! We are dedicated to helping job seekers find meaningful employment opportunities and connecting employers with qualified candidates. Our goal is to streamline the job search process and make it easier for both employers and job seekers to connect and communicate effectively.</p>
+						<div class = "col-md-12" style="margin:20px; padding:20px;">
+						<p class>Welcome to our online job finder platform! We are dedicated to helping job seekers find meaningful employment opportunities and connecting employers with qualified candidates. Our goal is to streamline the job search process and make it easier for both employers and job seekers to connect and communicate effectively.</p>
 						 <p>Our platform offers a user friendly interface that allows job seekers to search for jobs based on their preferences, such as location, industry, job type, and experience level. We collaborate with a wide range of companies, from small businesses to multinational corporations, across various industries to provide a diverse range of job opportunities..</p>
-					
-				</div>	
+</div>
+				</div>	 
 				</div>
 				</div>
 			</div>
@@ -28,21 +28,22 @@
 							<div class="col-md-4">
 								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span style="color:darkblue;">Why Choose Us?</span></h3>
+									<h3><span style="color:aqua; margin:20px; padding:20px;">Why Choose Us?</span></h3>
 								</div>
-								<p style="color:darkblue;"> 
+								<div class = "col-md-12">
+								<p > 
 							    The ability to narrow down your job search based on specific criteria such as location, industry, experience level, and salary range 
 								can save you time and help you find the most relevant job opportunities. An intuitive and user-friendly interface makes it easy for you to navigate the application, search for jobs, and apply with minimal effort.
 								 Look for an application that offers a seamless and hassle-free user experience. The ability to narrow down your job search based on specific criteria such as location, industry, experience level, 
 								 and salary range can save you time and help you find the most relevant job opportunities.
-									<br/>
-								<br/>
+									
 								 
 							       </p>
+								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="block-heading-two">
-									<h3><span style="color:darkblue;">Our Solution</span></h3>
+									<h3><span style="color:green; margin:20px; padding:20px;">Our Solution</span></h3>
 								</div>		
 								<!-- Accordion starts -->
 								<div class="panel-group" id="accordion-alt3">
@@ -116,7 +117,7 @@
 							
 							<div class="col-md-4">
 								<div class="block-heading-two">
-									<h3><span style="color:darkblue;">Our Expertise</span></h3>
+									<h3><span style="color:red; margin:20px; padding:20px;">Our Expertise</span></h3>
 								</div>								
 								<h6>Career Development Resources</h6>
 								<div class="progress pb-sm">
@@ -214,4 +215,3 @@
 									
 				</div>
 	</section> 
- 

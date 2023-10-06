@@ -18,10 +18,11 @@
  		<div class="row">
  			<div class="col-md-12">
  				<div class="about-logo">
- 					<h3></h3>
+				 <div class="col-md-12">
  					<p>Our search filters enable you to narrow down your job search based on specific criteria such as location, industry, job type, salary range, and more. This ensures that you receive personalized results tailored to your preferences.</p>
  					<p> We provide tools and resources to help you create an impressive and professional resume. Our resume builder guides you through the process, allowing you to highlight your skills, experience, and qualifications effectively.</p>
  				</div>
+</div>
  			</div>
  		</div>
  		<div class="row">
@@ -75,7 +76,7 @@
 
  					function init_map() {
  						var myOptions = {
- 							zoom: 14,
+ 							zoom: 15,
  							center: new google.maps.LatLng(27.700769, 85.300140),
 
  							mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -87,7 +88,7 @@
 
  						marker = new google.maps.Marker({
  							map: map,
- 							position: new google.maps.LatLng(27.702471, 85.341403)
+ 							position: new google.maps.LatLng(27.687518631828006, 85.34358486877845)
  						});
 
 

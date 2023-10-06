@@ -14,7 +14,7 @@ require_once("../include/initialize.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ERIS | Log in</title>
+  <title>ADMIN| Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -104,7 +104,7 @@ if(isset($_POST['btnLogin'])){
     //make use of the static function, and we passed to parameters
     $res = $user->userAuthentication($email, $h_upass);
     if ($res==true) { 
-       message("You logon as ".$_SESSION['ROLE'].".","success");
+       message("You log in as ".$_SESSION['ROLE'].".","success");
       // if ($_SESSION['ROLE']=='Administrator' || $_SESSION['ROLE']=='Cashier'){
 
         $_SESSION['ADMIN_USERID'] = $_SESSION['USERID'];
