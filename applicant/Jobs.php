@@ -113,26 +113,88 @@
         # code...
         require_once("accounts.php");
         break;
-      
+    case 'jobs':
+        # code...
+        require_once("Jobs.php");
+        break;
       default:
         # code...
         require_once("appliedjobs.php");
         break;
     }
-?>  
-         <!--   <ul class="nav nav-tabs" id="myTab">
-        <li class="<?php echo  $_SESSION['appliedjobs']; ?>"><a href="<?php echo web_root.'applicant/index.php?view=appliedjobs'; ?>" >Applied Jobs</a></li> 
-        <li class="<?php echo  $_SESSION['accounts'];  ?>"><a href="<?php echo web_root.'applicant/index.php?view=accounts'; ?>" >Accounts</a></li> 
-      </ul>
-          
-      <div class="tab-content bottomline">
-         
-         <div class="tab-pane <?php echo $_SESSION['appliedjobs']; ?>" id="appliedjobs"><br/>  
-         </div>
-           <div class="tab-pane <?php echo $_SESSION['accounts']; ?>" id="accounts"><br/>  
-          </div> 
 
-        </div> -->    
+
+    include '../recommend.php';
+?>  
+ <table class="table table-bordered pt-2">
+    <thead>
+        <tr>
+            <th>Job Title</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        foreach($output as $key => $o){
+            $sql = "SELECT * FROM tbljob WHERE JOBID='$key'";
+            $rows = mysqli_query($conn, $sql);
+
+            // $job_data = [];
+            while ($row = $rows->fetch_assoc()) {
+                $job_data = $row;
+            }
+        ?>
+        <tr>
+            <td>
+            <div class="panel-header">
+                <div style="border-bottom: 1px solid #ddd;padding: 10px;font-size: 25px;font-weight: bold;color: #000;margin-bottom: 5px;">
+                <?php echo $job_data['OCCUPATIONTITLE']; ?> 
+                </div> 
+            </div>
+                <div class="col-sm-6">
+                                            <ul>
+                                                <li><i class="fp-ht-bed"></i>Required No. of Employee's : <?php echo $job_data['REQ_NO_EMPLOYEES']; ?></li>
+                                                <li><i class="fp-ht-food"></i>Salary : <?php echo number_format($job_data['SALARIES'],2);  ?></li>
+                                                <li><i class="fa fa-sun-"></i>Duration of Employment : <?php echo $job_data['DURATION_EMPLOYEMENT']; ?></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul> 
+                                                <li><i class="fp-ht-tv"></i>Prefered Sex : <?php echo $job_data['PREFEREDSEX']; ?></li>
+                                                <li><i class="fp-ht-computer"></i>Sector of Vacancy : <?php echo $job_data['SECTOR_VACANCY']; ?></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <p>Qualification/Work Experience :</p>
+                                             <ul style="list-style: none;"> 
+                                                <li><?php echo $job_data['QUALIFICATION_WORKEXPERIENCE'] ;?></li> 
+                                            </ul> 
+                                        </div>
+                                        <div class="col-sm-12"> 
+                                            <p>Job Description:</p>
+                                            <ul style="list-style: none;"> 
+                                                 <li><?php echo $job_data['JOBDESCRIPTION'] ;?></li> 
+                                            </ul> 
+                                         </div>
+            </td>
+            <td>
+                <a href="/online job finder/index.php?q=apply&job=<?php echo $job_data['JOBID']; ?>&view=personalinfo" class="btn btn-sm btn-main btn-next-tab">Apply Now !</a>
+            </td>
+        </tr>
+        <?php
+        }
+        ?>
+    </tbody>
+</table>
+            
+
+
+
+
+
+
+
+
         </div><!--/col-sm-9-->
     </div><!--/row-->
 

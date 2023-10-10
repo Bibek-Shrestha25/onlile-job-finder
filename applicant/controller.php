@@ -27,34 +27,56 @@ switch ($action) {
 	}
 
 	function doEdit(){
-		$birthdate =  date_format(date_create($_POST['BIRTHDATE']),'Y-m-d');
+		// $birthdate =  date_format(date_create($_POST['BIRTHDATE']),'Y-m-d');
 
-			$age = date_diff(date_create($birthdate),date_create('today'))->y;
-		 	if ($age < 20 ){
-		       message("Invalid age. 20 years old and above is allowed.", "error");
-		       redirect("index.php?view=accounts");
+			// $age = date_diff(date_create($birthdate),date_create('today'))->y;
+		 	// if ($age < 20 ){
+		    //    message("Invalid age. 20 years old and above is allowed.", "error");
+		    //    redirect("index.php?view=accounts");
 
-		    }else{ 
+		    // }else{ 
 					$applicant =New Applicants(); 
-					$applicant->FNAME = $_POST['FNAME'];
-					$applicant->LNAME = $_POST['LNAME'];
-					$applicant->MNAME = $_POST['MNAME'];
-					$applicant->ADDRESS = $_POST['ADDRESS'];
-					$applicant->SEX = $_POST['optionsRadios'];
-					$applicant->CIVILSTATUS = $_POST['CIVILSTATUS'];
-					$applicant->BIRTHDATE = $birthdate;
-					$applicant->BIRTHPLACE = $_POST['BIRTHPLACE'];
-					$applicant->AGE = $age; 
-					$applicant->EMAILADDRESS = $_POST['EMAILADDRESS'];
-					$applicant->CONTACTNO = $_POST['TELNO'];
-					$applicant->DEGREE = $_POST['DEGREE'];
-					$applicant->update($_SESSION['APPLICANTID']);
+					// $applicant->FNAME = $_POST['FNAME'];
+					// $applicant->LNAME = $_POST['LNAME'];
+					// $applicant->MNAME = $_POST['MNAME'];
+					// $applicant->ADDRESS = $_POST['ADDRESS'];
+					// $applicant->SEX = $_POST['optionsRadios'];
+					// $applicant->CIVILSTATUS = $_POST['CIVILSTATUS'];
+					// $applicant->BIRTHDATE = $birthdate;
+					// $applicant->BIRTHPLACE = $_POST['BIRTHPLACE'];
+					// $applicant->AGE = $age; 
+					// $applicant->EMAILADDRESS = $_POST['EMAILADDRESS'];
+					// $applicant->CONTACTNO = $_POST['TELNO'];
+					// $applicant->DEGREE = $_POST['DEGREE'];
+					// $applicant->preferred_jobs = $_POST['P_J'];
+					// $applicant->update($_SESSION['APPLICANTID']);
+
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$dbname = "job_finder";
+
+					// Create connection
+					$conn = new mysqli($servername, $username, $password, $dbname);
+					// Check connection
+					if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+					} 
+
+					$preferred_jobs = $_POST['P_J'];
+					$pj = serialize($preferred_jobs);
+					$id = $_SESSION['APPLICANTID'];
+
+					$sql = "UPDATE tblapplicants SET preferred_jobs = '$pj' WHERE APPLICANTID = '$id'";
+
+					if ($conn->query($sql) === TRUE) {
 
 					message("Account has been updated!", "success");
 					redirect("index.php?view=accounts");
+					  } else {
+						echo "Error updating record: " . $conn->error;
 	    	}
 	}
-   
 	function doupdateimage(){
 			$errofile = $_FILES['photo']['error'];
 			$type = $_FILES['photo']['type'];

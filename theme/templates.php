@@ -18,7 +18,7 @@
 <!-- datetime picker CSS -->
 <link href="<?php echo web_root; ?>plugins/datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>plugins/datepicker/datepicker3.css" rel="stylesheet" media="screen">
- 
+<link href="<?php echo web_root; ?>plugins/select2.min.css" rel="stylesheet" />
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -287,7 +287,13 @@
 <script src="<?php echo web_root; ?>plugins/home-plugins/js/custom.js"></script> 
 <!-- <script src="<?php echo web_root; ?>plugins/paralax/paralax.js"></script>  -->
 
+<script src="<?php echo web_root; ?>plugins/select2.min.js"></script>
 
+<script>
+  $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+ </script>
 <script>
 function getInputData() {
     // Get the input element by its ID

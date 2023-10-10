@@ -7,7 +7,10 @@
       margin-bottom: 5px;
     }
   </style>
+  
+
 <form class="form-horizontal" method="POST" action="controller.php?action=edit">
+  <input type="hidden" name="user_id" value="<?php echo $_SESSION['APPLICANTID']; ?>">
       <div class="box-header with-border">
               <h3 class="box-title">Accounts</h3>
              </div> 
@@ -145,6 +148,47 @@
                         "Educational Attainment" disabled onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off" value="<?php echo $appl->DEGREE;?>">
                     </div>
                 </div>
+              </div>  
+
+              <div class="form-group">
+                <div class="col-md-11">
+                  <label class="col-md-4 control-label" for=
+                  "DEGREE">Preferred Jobs: </label>
+
+                  <div class="col-md-8"> 
+                  <?php
+                  if(!$appl->preferred_jobs){
+                    $Sql = "SELECT *from tblcategory";
+                    $mydb->setQuery($Sql);
+                    $cur = $mydb->loadResultList();
+                    ?>
+                  <select class="js-example-basic-multiple form-control" name="P_J[]" multiple="multiple">
+                  <?php
+                      foreach ($cur as $a) {
+                    ?>
+                    <option value="<?php echo $a->CATEGORY; ?>"><?php echo $a->CATEGORY; ?></option>
+                    <?php
+                      }
+                    ?>
+                  </select>
+                  <?php
+                  }
+                  else{
+                  ?>
+                  <input type="text" class="form-control" disabled value="<?php
+                    $pj = $appl->preferred_jobs;
+                    $pjs = unserialize($pj);
+                    echo implode(', ', $pjs);
+                  ?>">
+                  <?php } ?>
+                  <br>
+                <div class="form-group">
+                  <div class="col-md-4 pull-right">
+                  <input type="submit" value="Update" class="form-control btn btn-sm btn-success">
+                  </div>
+                </div>
+              </div>
+
               </div>  
           </div>              
  </form>

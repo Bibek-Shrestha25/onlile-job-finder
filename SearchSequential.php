@@ -1,8 +1,8 @@
 <div class="container"  style="margin: 20px auto;">
 <?php
-// Algo
+// Algorithm
 function sequentialSearch($arr, $target) {
-    //linear search algorith
+    //linear search algorithm
     $length = count($arr);
     $indices = [];
 

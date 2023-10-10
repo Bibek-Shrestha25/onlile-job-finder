@@ -1,4 +1,3 @@
-
 <section id="banner" height="50%">
   
    
